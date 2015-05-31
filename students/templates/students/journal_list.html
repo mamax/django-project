@@ -1,60 +1,10 @@
-  <!DOCTYPE html>
-  <html lang="uk">
-  <head>
-  <meta charset="UTF-8"/>
-  	<title>База Студентів</title>
-  	<meta name="description" value="Система Обліку Студентів Навчального Закладу" />
+{% extends "students/base.html" %}
+{% load static from staticfiles %}
+{% block meta_title %}Облік Відвідування{% endblock meta_title %}
+{% block title %}Облік Відвідування{% endblock title %}
+{% block content %}
 
-  	<!-- Include Styles -->
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap/3.3.0/css/bootstrap.min.css">
-		<link rel="stylesheet" href="./css/main.css">
-		<style type="text/css">.col-xs-12, .col-xs-4, .col-xs-8 
-		<!--
-		{border:1px solid red;}
-		-->
-		</style>
-  </head>
-  <body>
-  	<!-- Start container -->
-  	<div class= "container">
-  	<!-- Start header -->
-  		<div class= "row" id ="header">
-  		<!--Logo -->
-  			<div class = "col-xs-8">
-  				<h1>Сервіс Обліку Студентів</h1>
-  			</div>
 
-  		<!-- Group selector-->
-  			<div class = "col-xs-4" id= "group-selector">
-  				<strong>Група:</strong>
-				<select>
-					<option value="">Усі Студенти</option>
-					<option value="">МтМ - 21, Подоба Віталій (No 254)</option>
-					<option value="">МтМ - 22, Корост Андрій (No 2123)</option>
-				</select>
-  			</div>
-  		</div>
-  		<!-- END Header-->
-
-  		<!-- Start SubHeader-->
-  		<div class ="row" id = "sub-header">
-  			<div class="col-xs-12">
-  				<ul class="nav nav-tabs" role="tablist">
-					<li role="presentation"><a href="../../../static/index.html">Студенти</a></li>
-					<li role="presentation" class="active"><a href="./visiting.html">Відвідування</a></li>
-					<li role="presentation"><a href="../../../static/groups.html">Групи</a></li>
-				</ul>
-  			</div>
-  		</div>
-  		<!-- End SubHeader -->
-  		
-  		<!-- Start Main Page Content -->
-		<div class="row" id="content-columns">
-
-			<div class="col-xs-12" id="content-column">
-				<!-- Status Message -->
-					<h2>Облік Відвідування</h2>
-					<!-- Add Student Button -->
 					<center><h5>&larr;  Жовтень 2014  &rarr;</h5></center>
 					
 					<div>
@@ -142,24 +92,4 @@
 								<li><a href="#">Далі</a></li>
 							</ul>
 						</nav>
-				<!-- End Students Listing -->
-					</div>
-			</div>
-		</div>
-		<!-- End Main Page Content -->
-		<!-- Start Footer -->
-		<div class="row" id="footer">
-			<div class="col-xs-12">
-				&copy; 2014 Сервіс Обліку Студентів
-			</div>
-		</div>
-		<!-- End Footer -->
-	</div>
-	<!--End Container-->
-
-
-	<!-- Javascripts Section -->
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
-		<script src="https://cdn.jsdelivr.net/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-  </body>
-  </html>
+				{% endblock content %}
