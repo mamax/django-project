@@ -25,72 +25,30 @@
 									</tr>
 								</thead>
 									<tbody>
+									{% for group in groups %}
 										<tr>
-											<td>1</td>
-											<td>MтM-21</td>
-											<td><a title="Редагувати" href="#">Яченюк Олег</a></td>
+											<td>{{ forloop.counter }}</td>
+											<td>{{ group.name }}</td>
+											<td><a title="Редагувати" href="#">{{ group.captain }}</a></td>
 											<td><div class="dropdown">
 													<button class="btn btn-default dropdown-toggle"	type="button" data-toggle="dropdown">Дія
 														<span class="caret"></span>
 													</button>
 													<ul class="dropdown-menu" role="menu">
 														<li role="presentation">
-															<a role="menuitem" tabindex="-1" href="#">Відвідування</a>
+															<a role="menuitem" tabindex="-1" href="">Відвідування</a>
 														</li>
 														<li role="presentation">
-															<a role="menuitem" tabindex="-1" href="#">Редагувати</a>
+															<a role="menuitem" tabindex="-1" href="{% url "groups_edit" group.id %}">Редагувати</a>
 														</li>
 														<li role="presentation">
-															<a role="menuitem" tabindex="-1" href="#">Видалити</a>
+															<a role="menuitem" tabindex="-1" href="{% url "groups_delete" group.id %}">Видалити</a>
 														</li>
 													</ul>
 												</div>
 											</td>
 										</tr>
-										<tr>
-											<td>2</td>
-											<td>MтM-22</td>
-											<td><a title="Редагувати" href="#">Подоба Віталій</a></td>
-											<td><div class="dropdown">
-													<button class="btn btn-default dropdown-toggle"	type="button" data-toggle="dropdown">Дія
-														<span class="caret"></span>
-													</button>
-													<ul class="dropdown-menu" role="menu">
-														<li role="presentation">
-															<a role="menuitem" tabindex="-1" href="#">Відвідування</a>
-														</li>
-														<li role="presentation">
-															<a role="menuitem" tabindex="-1" href="#">Редагувати</a>
-														</li>
-														<li role="presentation">
-															<a role="menuitem" tabindex="-1" href="#">Видалити</a>
-														</li>
-													</ul>
-												</div>
-											</td>
-										</tr>
-										<tr>
-											<td>3</td>
-											<td>MтM-23</td>
-											<td><a title="Редагувати" href="#">Іванюк Андрій</a></td>
-											<td><div class="dropdown">
-													<button class="btn btn-default dropdown-toggle"	type="button" data-toggle="dropdown">Дія
-														<span class="caret"></span>
-													</button>
-													<ul class="dropdown-menu" role="menu">
-														<li role="presentation">
-															<a role="menuitem" tabindex="-1" href="#">Відвідування</a>
-														</li>
-														<li role="presentation">
-															<a role="menuitem" tabindex="-1" href="#">Редагувати</a>
-														</li>
-														<li role="presentation">
-															<a role="menuitem" tabindex="-1" href="#">Видалити</a>
-														</li>
-													</ul>
-												</div>
-											</td>
-										</tr>
+										{% endfor %}
 									</tbody>
 						</table>
 						<nav>

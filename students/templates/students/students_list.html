@@ -31,10 +31,8 @@
                     <tr>
                         <td>{{ forloop.counter }}</td>
                         <td><img height="30" width="30" src="{% static student.image %}" class="img-circle"></td>
-                        <td><a title="Редагувати" href="{% url "students_edit" student.id %}">{{ student.last_name
-                            }}</a></td>
-                        <td><a title="Редагувати" href="{% url "students_edit" student.id %}">{{ student.first_name
-                            }}</a></td>
+                        <td><a title="Редагувати" href="{% url "students_edit" student.id %}">{{ student.last_name }}</a></td>
+                        <td><a title="Редагувати" href="{% url "students_edit" student.id %}">{{ student.first_name }}</a></td>
                         <td>{{ student.ticket }}</td>
                         <td>
                             <div class="dropdown">
@@ -43,16 +41,13 @@
                                 </button>
                                 <ul class="dropdown-menu" role="menu">
                                     <li role="presentation">
-                                        <a role="menuitem" tabindex="-1" href="{% url " journal_view" student.id
-                                        %}">Відвідування</a>
+                                        <a role="menuitem" tabindex="-1" href="{% url "journal_view" student.id %}">Відвідування</a>
                                     </li>
                                     <li role="presentation">
-                                        <a role="menuitem" tabindex="-1" href="{% url " students_edit" student.id
-                                        %}">Редагувати</a>
+                                        <a role="menuitem" tabindex="-1" href="{% url "students_edit" student.id %}">Редагувати</a>
                                     </li>
                                     <li role="presentation">
-                                        <a role="menuitem" tabindex="-1" href="{% url " students_delete" student.id
-                                        %}">Видалити</a>
+                                        <a role="menuitem" tabindex="-1" href="{% url "students_delete" student.id %}">Видалити</a>
                                     </li>
                                 </ul>
                             </div>
